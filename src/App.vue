@@ -9,17 +9,18 @@
                     <li class="nav-item" role="presentation"><router-link :to="{name: 'sobremi'}">sobre mí</router-link></li>
                     <li class="nav-item" role="presentation"><router-link :to="{name: 'contacto'}">contacto</router-link></li>
                     <li class="nav-item" role="presentation"><router-link to="/post/1">último post</router-link></li>
+                    <li class="nav-item" role="presentation"><router-link to="/administrador/simple">administrador</router-link></li>
                 </ul>
         </div>
         </div>
     </nav>
+    <transition name="vistas">
     <router-view></router-view>
+    </transition>
   </div>
-  
 </template>
 
 <script>
-
 export default {
 
 }
@@ -33,5 +34,18 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+.vistas-enter-active {
+  animation: transicionVistas ease .1s;
+}
+
+@keyframes transicionVistas {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%
+  }
 }
 </style>

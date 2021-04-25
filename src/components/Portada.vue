@@ -6,6 +6,6 @@
 
 <script>
 export default {
-    name: "Inicio",
+    name: "Potada",
 }
 </script>
